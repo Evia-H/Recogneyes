@@ -1,14 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to right, #404bea, #4160ee, #4972ef, #5884ee, #6a94ec, #5fa1f1, #5aadf3, #5cb9f4, #2dc5f6, #00d0f1, #00dae6, #04e3d5);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+  cursor: pointer;
 }
