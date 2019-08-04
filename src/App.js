@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
@@ -18,20 +18,47 @@ const particlesOptions = {
   }
 
 }
-function App() {
-  return (
-    <div className="App">
-      <Particles
-        className='particles'
-        params={particlesOptions}
+class App extends Component {
 
-      />
-      <Navigation></Navigation>
-      <Logo></Logo>
-      <Rank></Rank>
-      <ImageLinkForm></ImageLinkForm>
-    </div>
-  );
+  constructor(){
+    super();
+
+    this.state = {
+      input : '',
+    }
+  }
+
+  onInputChange = event =>{
+    this.setState({
+      input : event.target.value
+    },()=> console.log(this.state.input))
+  }
+
+  onSubmit = event =>{
+    console.log('submit')
+  }
+
+  render(){
+    return(
+        <div className = "App" >
+          <Particles
+            className='particles'
+            params={particlesOptions}
+
+          />
+          <Navigation></Navigation>
+          <Logo></Logo>
+          <Rank></Rank>
+          <ImageLinkForm
+          onInputChange={this.onInputChange}
+          onSubmit={this.onSubmit}
+          ></ImageLinkForm>
+        </div>
+    );
+  }
+  
+  
+
 }
 
 export default App;
