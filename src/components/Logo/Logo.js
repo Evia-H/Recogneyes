@@ -12,7 +12,7 @@ const Logo = () => {
             options={{ 
                 max: 55 
             }} 
-            style={{  width: 200 }} >
+            style={{  maxWidth: 300 }} >
                 <div className="Tilt-inner pa3 f3 fw5 lh-copy"> Recogn
                 <img style={{height:'1.5rem',marginBottom:'-5px'}} src={Eyecon} alt=''></img>
                  y
