@@ -53,7 +53,7 @@ class App extends Component {
           console.log(response)
         },
         function(err) {
-          // there was an error
+          console.log(err)
         }
       );
     }
